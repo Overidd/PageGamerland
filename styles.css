@@ -1,6 +1,3 @@
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -12,28 +9,29 @@ img {
     max-width: 100%;
 }
 
-.layout{
-   
-
+.layout {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    background-image: linear-gradient(to bottom, #384da2, #4b2374);
+    /* height: 100vh; */
 }
 
-header{
-    background-color: #000;
+header {
+    /* background-color: #fff; */
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
 }
+
 .menu {
-    
     position: relative;
     color: #fff;
     display: flex;
     align-items: center;
 }
-.menu__logo{
+
+.menu__logo {
     width: 60px;
     height: 60px;
 }
@@ -47,12 +45,12 @@ header{
     z-index: 2;
     top: 100%;
     left: 0;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none;
-    
+
     display: none;
 }
 
@@ -60,13 +58,13 @@ header{
     a {
         color: inherit;
         font-size: 1.3rem;
-        padding:  0.9rem 1rem;
+        padding: 0.9rem 1rem;
         display: block;
         text-decoration: none;
     }
 }
 
-.text__logo{
+.text__logo {
     font-size: 2rem;
     margin-left: 10px;
 }
@@ -82,39 +80,41 @@ input[type="checkbox"] {
     display: none;
 }
 
-.label__ckeck{
+.label__ckeck {
     display: none;
 }
 
-.check__label:has(input[type="checkbox"]:checked) + .menu__list {
+.check__label:has(input[type="checkbox"]:checked)+.menu__list {
     display: flex;
 }
 
-input[type="checkbox"]:checked ~ .label__ckeck {
+input[type="checkbox"]:checked~.label__ckeck {
     display: block;
 }
-input[type="checkbox"]:checked ~ .label__notckeck {
+
+input[type="checkbox"]:checked~.label__notckeck {
     display: none;
 }
 
-.header__background{
+.header__background {
 
     height: 100%;
-    background-color: #ccc;
+    /* background-color: #ccc; */
     flex-grow: 1;
     position: relative;
     color: #000;
 
-    img{
+    img {
         position: absolute;
         z-index: 1;
         display: block;
-        background-color: #ccc;
+        /* background-color: #ccc; */
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    h1{
+
+    h1 {
         margin-top: 5rem;
         text-align: center;
         position: relative;
@@ -126,33 +126,37 @@ input[type="checkbox"]:checked ~ .label__notckeck {
 
 } */
 
-.market{
+.market {
     width: 90%;
     max-width: 1300px;
     margin: auto;
     padding: 0 1rem;
+    background-color: transparent;
 }
-.filter__lists{
+
+.filter__lists {
     display: flex;
     list-style: none;
     border-radius: 14px;
     overflow: hidden;
 }
-.filter__item{
+
+.filter__item {
     flex-grow: 1;
     flex-basis: 0;
     text-align: center;
     color: #fff;
     background-color: #48b;
-    a{
+
+    a {
         display: block;
         padding: 0.7rem 0;
         color: inherit;
         text-decoration: none;
     }
-}   
+}
 
-.market__gallery{
+.market__gallery {
     display: flex;
     flex-wrap: wrap;
     min-height: 100vh;
@@ -161,53 +165,55 @@ input[type="checkbox"]:checked ~ .label__notckeck {
 
 }
 
-.gallery__item{
-    background-color: #ccc;
+.gallery__item {
+    /* background-color: #ccc; */
     min-width: 300px;
     flex-basis: 30%;
     flex-grow: 1;
     border-radius: 16px;
     overflow: hidden;
 
-    img{
+    img {
         object-fit: cover;
         height: 100%;
     }
 }
 
-.footer{
+.footer {
     margin-top: auto;
-    background-color: #000;
+    /* background-color: #000; */
     color: #fff;
     padding: 2rem;
     text-align: center;
 }
 
-.market__sub{
+.market__sub {
     margin-top: 1rem;
     background-color: #94c5c0;
     padding: 1rem;
-    --width-input:80%;
+    --width-input: 80%;
 }
 
 
-input[type="text"], input[type="submit"]{
+input[type="text"],
+input[type="submit"] {
     border: none;
     padding: 0.8rem 1rem;
     font-size: 1.1rem;
 }
 
-input[type="text"]{
+input[type="text"] {
     border-radius: 16px 0 0 16px;
     width: var(--width-input);
     margin-right: -4px;
 }
 
-input[type="submit"]{
-    width:  calc(100% - var(--width-input));
+input[type="submit"] {
+    width: calc(100% - var(--width-input));
     cursor: pointer;
     border-radius: 0 16px 16px 0;
 }
-:is(input[type="text"], input[type="submit"]):focus-visible{
+
+:is(input[type="text"], input[type="submit"]):focus-visible {
     outline: none;
 }
