@@ -15,6 +15,7 @@ img {
     gap: 2rem;
     background-image: linear-gradient(to bottom, #384da2, #4b2374);
     /* height: 100vh; */
+    padding: 0 2rem;
 }
 
 header {
@@ -25,10 +26,17 @@ header {
 }
 
 .menu {
+    margin-top: 1rem;
+    padding: 0 1rem;
     position: relative;
     color: #fff;
     display: flex;
     align-items: center;
+    border-radius: 16px;
+    border: 1px solid #fff9;
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: #3b5bac;
+    box-shadow: 0px 0px 30px  #0006;
 }
 
 .menu__logo {
