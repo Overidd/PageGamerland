@@ -13,7 +13,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background-image: linear-gradient(to bottom, #384da2, #4b2374);
+    background-image: linear-gradient(to bottom,#63246b, #4b2374, #384da2, #4b2374 ,#63246b);
     /* height: 100vh; */
 }
 
