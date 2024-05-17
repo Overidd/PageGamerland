@@ -1,0 +1,213 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.layout{
+   
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+header{
+    background-color: #000;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+.menu {
+    
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.menu__logo{
+    width: 60px;
+    height: 60px;
+}
+
+.menu__list {
+    background-color: #48b;
+    color: #ffff;
+    width: 100%;
+    margin-left: auto;
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    
+    display: none;
+}
+
+.list__item {
+    a {
+        color: inherit;
+        font-size: 1.3rem;
+        padding:  0.9rem 1rem;
+        display: block;
+        text-decoration: none;
+    }
+}
+
+.text__logo{
+    font-size: 2rem;
+    margin-left: 10px;
+}
+
+.check__label {
+    margin-left: auto;
+    font-size: 4.5rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.label__ckeck{
+    display: none;
+}
+
+.check__label:has(input[type="checkbox"]:checked) + .menu__list {
+    display: flex;
+}
+
+input[type="checkbox"]:checked ~ .label__ckeck {
+    display: block;
+}
+input[type="checkbox"]:checked ~ .label__notckeck {
+    display: none;
+}
+
+.header__background{
+
+    height: 100%;
+    background-color: #ccc;
+    flex-grow: 1;
+    position: relative;
+    color: #000;
+
+    img{
+        position: absolute;
+        z-index: 1;
+        display: block;
+        background-color: #ccc;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    h1{
+        margin-top: 5rem;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/* .market{
+
+} */
+
+.market{
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 1rem;
+}
+.filter__lists{
+    display: flex;
+    list-style: none;
+    border-radius: 14px;
+    overflow: hidden;
+}
+.filter__item{
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+    color: #fff;
+    background-color: #48b;
+    a{
+        display: block;
+        padding: 0.7rem 0;
+        color: inherit;
+        text-decoration: none;
+    }
+}   
+
+.market__gallery{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    gap: 12px;
+    margin-top: 1rem;
+
+}
+
+.gallery__item{
+    background-color: #ccc;
+    min-width: 300px;
+    flex-basis: 30%;
+    flex-grow: 1;
+    border-radius: 16px;
+    overflow: hidden;
+
+    img{
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+.footer{
+    margin-top: auto;
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.market__sub{
+    margin-top: 1rem;
+    background-color: #94c5c0;
+    padding: 1rem;
+    --width-input:80%;
+}
+
+
+input[type="text"], input[type="submit"]{
+    border: none;
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+}
+
+input[type="text"]{
+    border-radius: 16px 0 0 16px;
+    width: var(--width-input);
+    margin-right: -4px;
+}
+
+input[type="submit"]{
+    width:  calc(100% - var(--width-input));
+    cursor: pointer;
+    border-radius: 0 16px 16px 0;
+}
+:is(input[type="text"], input[type="submit"]):focus-visible{
+    outline: none;
+}
