@@ -22,7 +22,7 @@ header {
     flex-direction: column;
     gap: 2rem;
 
-    background-image: linear-gradient(to bottom, #384da2, #4b2374);
+    /* background-image: linear-gradient(to bottom, #384da2, #4b2374); */
     /* height: 100vh; */
     /* padding: 0 2rem; */
 
@@ -45,7 +45,7 @@ header {
     border: 1px solid #fff9;
     backdrop-filter: blur(16px) saturate(180%);
     background-color: #3b5bac;
-    box-shadow: 0px 0px 30px #0006;
+    box-shadow: 0px 0px 30px #4f0e58;
 
     position: sticky;
     top: 0;
@@ -55,7 +55,7 @@ header {
     animation-range-start: cover 30%;
     /* --radiomenu:16px;  */
     --rotacion: paused;
-
+    z-index: 2;
 }
 
 
@@ -114,8 +114,10 @@ header {
 
 
 .menu__list {
-    backdrop-filter: blur(5px);
+
+    /* backdrop-filter: blur(5px); */
     /* filter: blur(5px); */
+    backdrop-filter: blur(16px) saturate(180%);
     background-color: #48bc;
     color: #000;
     position: absolute;
@@ -209,10 +211,19 @@ input[type="checkbox"]:checked~.label__notckeck {
     /* width: 90%; */
     max-width: 1300px;
     margin: auto;
-    /* padding: 0 1rem; */
+    padding: 0 1rem;
+    display: grid;
+    grid-template-areas:
+        "marketmenu"
+        "marketgallery"
+        "markettop"
+        "marketsub"
+    ;
+    gap: 1rem;
 }
 
 .market__menu {
+    grid-area: marketmenu;
     width: 100%;
 
     /* animation: menu both; */
@@ -272,6 +283,7 @@ input[type="checkbox"]:checked~.label__notckeck {
 }
 
 .market__gallery {
+    grid-area: marketgallery;
     display: flex;
     flex-wrap: wrap;
     min-height: 100vh;
@@ -282,7 +294,7 @@ input[type="checkbox"]:checked~.label__notckeck {
 
 .gallery__item {
     /* background-color: #ccc; */
-    min-width: 300px;
+    min-width: 250px;
     flex-basis: 30%;
     flex-grow: 1;
     border-radius: 16px;
@@ -295,18 +307,10 @@ input[type="checkbox"]:checked~.label__notckeck {
 }
 
 /**------STILOS DEL MARKET TOP */
-.market__top {
-    height: 20vh;
-    overflow: hidden;
-    border: 1px solid #000;
-}
-
-.top_products {}
-
-
 
 
 .market__sub {
+    grid-area: marketsub;
     margin-top: 1rem;
     /* background-color: #94c5c0; */
     /* padding: 1rem; */
@@ -347,6 +351,72 @@ input[type="submit"] {
     outline: none;
 }
 
+/* ---------- */
+
+
+.market__top {
+    grid-area: markettop;
+    border: 1px solid #fff;
+    backdrop-filter: blur(7px);
+    background-color: transparent;
+    text-align: center;
+    height: fit-content;
+
+    h3 {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+}
+
+.top_products {
+    border: none;
+    height: 30vh;
+    flex-basis: 0;
+    flex-grow: 1;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        object-fit: contain;
+        transition: transform 0.5s;
+    }
+}
+
+.img__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-wrap: balance;
+    padding: 1rem;
+    gap: 10px;
+    color: #fff;
+    transition: transform 0.5s;
+
+    p {
+        opacity: 0.7;
+    }
+}
+
+.top_products .img__text {
+    background-color: #5dcbd5;
+    transform: translateX(-100%);
+}
+
+.top_products:hover .img__text {
+    transform: translateX(-50%);
+}
+
+
 
 .footer {
     margin-top: auto;
@@ -354,4 +424,30 @@ input[type="submit"] {
     color: #fff;
     padding: 2rem;
     text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+
+    .market {
+        /* width: 90%; */
+        max-width: 900px;
+        margin: auto;
+        /* padding: 0 1rem; */
+        display: grid;
+        grid-template-areas:
+            "marketmenu marketmenu marketmenu"
+            "markettop markettop markettop"
+            "marketgallery marketgallery marketgallery"
+            "marketsub marketsub marketsub"
+        ;
+        gap: 1rem;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .market {
+        /* width: 90%; */
+        max-width: 1200px;
+    }
 }
