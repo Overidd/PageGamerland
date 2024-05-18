@@ -20,8 +20,26 @@ img {
 }
 
 header {
-    height: 85dvh;
+    height: 80dvh;
+    /* height: fit-content; */
+    /* overflow: hidden; */
+    figure{
+        /* width: 90%; */
+        /* background-color: #fff4; */
+        height: 100%;
+    }
 }
+.publicidad {
+margin: auto;
+    /* object-fit: cover; */
+    object-position: bottom;
+    width: 75%;
+    height: 100%;
+    box-shadow:  0 0  10px #fffc;
+    border-radius: 16px;
+}
+
+
 
 /**----------Stilos del menu */
 .menu {
@@ -91,9 +109,6 @@ header {
     display: none;
 }
 
-.publicidad {
-    padding: 0;
-}
 
 .list__item {
     a {
