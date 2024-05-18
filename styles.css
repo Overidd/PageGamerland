@@ -9,57 +9,45 @@ img {
     max-width: 100%;
 }
 
-header {
-    /* background-color: #fff; */
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
 
-}
-
+/**----------Stilos del lagout */
 .layout {
+    background-image: linear-gradient(to bottom, #63246b, #4b2374, #384da2, #4b2374, #63246b);
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
-    /* background-image: linear-gradient(to bottom, #384da2, #4b2374); */
-    /* height: 100vh; */
-    /* padding: 0 2rem; */
-
-    background-image: linear-gradient(to bottom, #63246b, #4b2374, #384da2, #4b2374, #63246b);
-    /* height: 100vh; */
-    position: relative;
-
 }
 
+header {
+    height: 85dvh;
+}
 
+/**----------Stilos del menu */
 .menu {
     width: 90%;
+    background-color: #3b5bac;
+    color: #fff;
+    align-items: center;
     margin: auto;
     margin-top: 1rem;
     padding: 0 1rem;
-    color: #fff;
-    display: flex;
-    align-items: center;
     border-radius: 16px;
     border: 1px solid #fff9;
-    backdrop-filter: blur(16px) saturate(180%);
-    background-color: #3b5bac;
-    box-shadow: 0px 0px 30px #4f0e58;
 
     position: sticky;
+    z-index: 2;
     top: 0;
+
     animation: menu both;
     animation-timeline: view();
     animation-range-end: cover 100%;
     animation-range-start: cover 30%;
-    /* --radiomenu:16px;  */
-    --rotacion: paused;
-    z-index: 2;
+    backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: 0px 0px 30px #4f0e58;
+
+    display: flex;
 }
-
-
-
 
 @keyframes menu {
     0% {
@@ -69,66 +57,31 @@ header {
     5% {
         border-radius: 0;
         width: 100%;
-        --rotacion: rotacion;
     }
 
     100% {
         border-radius: 0;
         width: 100%;
-        --rotacion: rotacion;
-
     }
 }
-
 
 .menu__logo {
     width: 60px;
     height: 60px;
     animation: none;
-    /* animation: rotacion 0.4s infinite forwards;
-    animation-play-state: var(--rotacion);
-    transform: rotate(0deg); */
 }
 
-/* @keyframes rotacion {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(90deg);
-    }
-
-    50% {
-        transform: rotate(180deg);
-    }
-
-    75% {
-        transform: rotate(270deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-} */
-
-
 .menu__list {
-
-    /* backdrop-filter: blur(5px); */
-    /* filter: blur(5px); */
-    backdrop-filter: blur(16px) saturate(180%);
     background-color: #48bc;
     color: #000;
-    position: absolute;
-    /* filter: blur(5px); */
+    margin-left: auto;
+    backdrop-filter: blur(16px) saturate(180%);
     width: 100%;
 
-    /* height: 100vh; */
-    margin-left: auto;
-    z-index: 2;
+    position: absolute;
     top: 100%;
     left: 0;
+    z-index: 2;
 
     display: flex;
     flex-direction: column;
@@ -141,10 +94,10 @@ header {
 .list__item {
     a {
         color: inherit;
-        font-size: 1.3rem;
-        padding: 0.9rem 1rem;
         display: block;
         text-decoration: none;
+        font-size: 1.3rem;
+        padding: 0.9rem 1rem;
     }
 }
 
@@ -180,38 +133,13 @@ input[type="checkbox"]:checked~.label__notckeck {
     display: none;
 }
 
-.header__background {
 
-    height: 100%;
-    /* background-color: #ccc; */
-    flex-grow: 1;
-    position: relative;
-    color: #000;
-
-    img {
-        position: absolute;
-        z-index: 1;
-        display: block;
-        /* background-color: #ccc; */
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    h1 {
-        margin-top: 5rem;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-    }
-}
-
-
+/**-----------STILOS DEL MARKET  */
 .market {
-    /* width: 90%; */
+    width: 90%;
     max-width: 1300px;
     margin: auto;
-    padding: 0 1rem;
+
     display: grid;
     grid-template-areas:
         "marketmenu"
@@ -219,58 +147,26 @@ input[type="checkbox"]:checked~.label__notckeck {
         "markettop"
         "marketsub"
     ;
-    gap: 1rem;
+    gap: 2.5rem;
 }
 
 .market__menu {
     grid-area: marketmenu;
-    width: 100%;
-
-    /* animation: menu both; */
-    /* animation-timeline: view();
-    animation-range-end: cover 100%;
-    animation-range-start: cover 30%;
-    /* --radiomenu:16px;  */
-
 }
-
-/* @keyframes menu {
-    0% {
-        background-color: transparent;
-    }
-
-    5% {
-        transform: scaleX(1.1) scaleY(1);
-        --radiomenu: 0px;
-    }
-
-
-    100% {
- 
-        border-radius: 16px;
-        --radiomenu: 0px;
-        backdrop-filter: blur(50px);
-        padding: 0.5rem 0;
-        transform: scaleX(1.1) scaleY(1);
-    }
-} */
-
 
 .filter__lists {
     display: flex;
     list-style: none;
-    /* border-radius: 14px; */
     overflow: hidden;
     gap: 15px;
 }
 
 .filter__item {
-
     flex-grow: 1;
     flex-basis: 0;
-    text-align: center;
-    color: #fff;
     background-color: transparent;
+    color: #fff;
+    text-align: center;
     border-radius: 16px;
     border: 1px solid #fff;
 
@@ -282,98 +178,63 @@ input[type="checkbox"]:checked~.label__notckeck {
     }
 }
 
+/*----stilos de gallery  */
 .market__gallery {
     grid-area: marketgallery;
     display: flex;
     flex-wrap: wrap;
-    min-height: 100vh;
     gap: 12px;
-    margin-top: 1rem;
-
 }
 
 .gallery__item {
-    /* background-color: #ccc; */
     min-width: 250px;
     flex-basis: 30%;
     flex-grow: 1;
     border-radius: 16px;
     overflow: hidden;
+    border: 1px solid #fff;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
 
     img {
+        border-radius: 16px;
         object-fit: cover;
-        height: 100%;
+        height: 70%;
+    }
+
+    button {
+        margin-top: 20%;
+        color: inherit;
+        border: 1px solid #fff;
+        background-color: transparent;
+        padding: 1rem 3rem;
+        border-radius: 16px;
     }
 }
 
-/**------STILOS DEL MARKET TOP */
-
-
-.market__sub {
-    grid-area: marketsub;
-    margin-top: 1rem;
-    /* background-color: #94c5c0; */
-    /* padding: 1rem; */
-    --width-input: 80%;
-    box-shadow: 0 0 5px #fff6;
-    border-radius: 16px;
-}
-
-
-input[type="text"],
-input[type="submit"] {
-    border: none;
-    font-size: 1rem;
-    background-color: transparent;
-    color: #fffb;
-}
-
-input[type="text"] {
-    padding: 0.8rem 1rem;
-    width: var(--width-input);
-    margin-right: -4px;
-
-}
-
-input[type="text"]::placeholder {
-    color: inherit;
-    opacity: 0.7;
-}
-
-input[type="submit"] {
-    padding: 0.8rem 0;
-    width: calc(100% - var(--width-input));
-    cursor: pointer;
-    border-left: none;
-}
-
-:is(input[type="text"], input[type="submit"]):focus-visible {
-    outline: none;
-}
-
-/* ---------- */
-
-
+/*------STILOS DEL MARKET TOP */
 .market__top {
     grid-area: markettop;
     border: 1px solid #fff;
+    height: fit-content;
+    color: #fff;
+    text-align: center;
     backdrop-filter: blur(7px);
     background-color: transparent;
-    text-align: center;
-    height: fit-content;
 
     h3 {
+        color: inherit;
         font-size: 1.5rem;
-        color: #fff;
         margin-bottom: 1rem;
     }
 }
 
 .top_products {
-    border: none;
-    height: 30vh;
     flex-basis: 0;
     flex-grow: 1;
+    border: none;
+    height: 30vh;
     position: relative;
     border-radius: 16px;
     overflow: hidden;
@@ -416,7 +277,45 @@ input[type="submit"] {
     transform: translateX(-50%);
 }
 
+/**-----STILOS DE SUB  */
+.market__sub {
+    grid-area: marketsub;
+    --width-input: 80%;
+    box-shadow: 0 0 5px #fff6;
+    border-radius: 16px;
+}
 
+
+input[type="text"],
+input[type="submit"] {
+    border: none;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #fffb;
+}
+
+input[type="text"] {
+    padding: 0.8rem 1rem;
+    width: var(--width-input);
+    margin-right: -4px;
+
+}
+
+input[type="text"]::placeholder {
+    color: inherit;
+    opacity: 0.7;
+}
+
+input[type="submit"] {
+    padding: 0.8rem 0;
+    width: calc(100% - var(--width-input));
+    cursor: pointer;
+    border-left: none;
+}
+
+:is(input[type="text"], input[type="submit"]):focus-visible {
+    outline: none;
+}
 
 .footer {
     margin-top: auto;
@@ -426,13 +325,12 @@ input[type="submit"] {
     text-align: center;
 }
 
+/**-------------------------------------  */
 @media screen and (min-width: 700px) {
 
     .market {
-        /* width: 90%; */
         max-width: 900px;
         margin: auto;
-        /* padding: 0 1rem; */
         display: grid;
         grid-template-areas:
             "marketmenu marketmenu marketmenu"
@@ -442,12 +340,10 @@ input[type="submit"] {
         ;
         gap: 1rem;
     }
-
 }
 
 @media screen and (min-width: 1000px) {
     .market {
-        /* width: 90%; */
         max-width: 1200px;
     }
 }
