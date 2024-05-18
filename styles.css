@@ -187,9 +187,10 @@ input[type="checkbox"]:checked~.label__notckeck {
 }
 
 .gallery__item {
-    min-width: 250px;
     flex-basis: 30%;
     flex-grow: 1;
+    min-width: 250px;
+    height: fit-content;
     border-radius: 16px;
     overflow: hidden;
     border: 1px solid #fff;
@@ -204,7 +205,7 @@ input[type="checkbox"]:checked~.label__notckeck {
     }
 
     button {
-        margin-top: 20%;
+        margin-top: 1rem;
         color: inherit;
         border: 1px solid #fff;
         background-color: transparent;
@@ -216,42 +217,31 @@ input[type="checkbox"]:checked~.label__notckeck {
 /*------STILOS DEL MARKET TOP */
 .market__top {
     grid-area: markettop;
-    border: 1px solid #fff;
-    height: fit-content;
     color: #fff;
     text-align: center;
-    backdrop-filter: blur(7px);
-    background-color: transparent;
-
-    h3 {
-        color: inherit;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
+    border-radius: 16px;
+    border: 1px solid #fff;
+    overflow: hidden;
 }
 
 .top_products {
-    flex-basis: 0;
-    flex-grow: 1;
-    border: none;
     height: 30vh;
     position: relative;
-    border-radius: 16px;
     overflow: hidden;
+    transition: transform 0.5s;
 
     img {
+        height: 100%;
         width: 100%;
-        object-fit: contain;
-        transition: transform 0.5s;
+        object-fit: cover;
     }
 }
 
 .img__text {
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -269,20 +259,26 @@ input[type="checkbox"]:checked~.label__notckeck {
 }
 
 .top_products .img__text {
-    background-color: #5dcbd5;
+    background-color: #3c3d89b8;
+    /* backdrop-filter: blur(2px); */
     transform: translateX(-100%);
 }
 
 .top_products:hover .img__text {
-    transform: translateX(-50%);
+    transform: translateX(0%);
 }
 
 /**-----STILOS DE SUB  */
 .market__sub {
+    position: relative;
     grid-area: marketsub;
     --width-input: 80%;
     box-shadow: 0 0 5px #fff6;
     border-radius: 16px;
+    img{
+       display: none;
+       position: absolute;
+    }
 }
 
 
@@ -298,6 +294,7 @@ input[type="text"] {
     padding: 0.8rem 1rem;
     width: var(--width-input);
     margin-right: -4px;
+    background-color: #fff5;
 
 }
 
@@ -311,6 +308,7 @@ input[type="submit"] {
     width: calc(100% - var(--width-input));
     cursor: pointer;
     border-left: none;
+    background-image: linear-gradient(to left,#384da2, #4b2374);
 }
 
 :is(input[type="text"], input[type="submit"]):focus-visible {
@@ -327,7 +325,6 @@ input[type="submit"] {
 
 /**-------------------------------------  */
 @media screen and (min-width: 700px) {
-
     .market {
         max-width: 900px;
         margin: auto;
@@ -339,6 +336,39 @@ input[type="submit"] {
             "marketsub marketsub marketsub"
         ;
         gap: 1rem;
+    }
+    .market__sub{
+        /* --width-input: 80%; */
+        padding: 5rem 2rem;
+        background-color: #ccc5;
+        border: 1px solid #fff9;
+        backdrop-filter: blur(50px);
+    }
+
+    .sub__form{
+
+        div{
+            width: 70%;
+        }
+        img{
+            position: absolute;
+            width: 30%;
+            display: block;
+            bottom: 0px;
+            right: 0;
+        }
+    }
+    .market{
+        gap: 5rem;
+    }
+    input[type="submit"], input[type="text"]{
+        padding: 1.5rem 0;
+    }
+    input[type="submit"]{
+        border-radius: 0 16px 16px 0;
+    }
+    input[type="text"]{
+        border-radius: 16px 0 0 16px;
     }
 }
 
