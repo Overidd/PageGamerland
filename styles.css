@@ -20,22 +20,24 @@ img {
 }
 
 header {
-    height: 80dvh;
+    height: 40dvh;
     /* height: fit-content; */
-    /* overflow: hidden; */
-    figure{
+    overflow: hidden;
+
+    figure {
         /* width: 90%; */
         /* background-color: #fff4; */
         height: 100%;
     }
 }
+
 .publicidad {
-margin: auto;
+    margin: auto;
     /* object-fit: cover; */
     object-position: bottom;
     width: 75%;
     height: 100%;
-    box-shadow:  0 0  10px #fffc;
+    box-shadow: 0 0 10px #fffc;
     border-radius: 16px;
 }
 
@@ -398,6 +400,10 @@ input[type="submit"] {
 
     input[type="text"] {
         border-radius: 16px 0 0 16px;
+    }
+
+    header {
+        height: 80dvh;
     }
 }
 
