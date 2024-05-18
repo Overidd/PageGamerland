@@ -252,7 +252,7 @@ input[type="checkbox"]:checked~.label__notckeck {
     border-radius: 16px;
     overflow: hidden;
     position: relative;
-    z-index: 5;
+    z-index: 1;
     color: #fff;
 }
 .item__btn::before{
@@ -374,9 +374,7 @@ input[type="text"] {
 }
 
 input[type="text"]:hover {
-    padding: 0.8rem 1rem;
-    width: var(--width-input);
-    margin-right: -4px;
+
     background-color: rgba(255, 255, 255, 0.438);
 }
 
@@ -394,10 +392,6 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    padding: 0.8rem 0;
-    width: calc(100% - var(--width-input));
-    cursor: pointer;
-    border-left: none;
     background-image: linear-gradient(to left, #5e74cb, #7543a7);
 }
 
