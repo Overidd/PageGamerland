@@ -362,7 +362,9 @@ input[type="submit"] {
         gap: 5rem;
     }
     input[type="submit"], input[type="text"]{
-        padding: 1.5rem 0;
+        padding: 1.5rem 1.5rem;
+        font-size: 1.1rem;
+
     }
     input[type="submit"]{
         border-radius: 0 16px 16px 0;
