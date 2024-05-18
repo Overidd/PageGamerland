@@ -12,7 +12,6 @@ img {
     max-width: 100%;
 }
 
-
 /**----------Stilos del lagout */
 .layout {
     background-image: linear-gradient(to bottom, #63246b, #4b2374, #384da2, #4b2374, #63246b);
@@ -431,6 +430,12 @@ input[type="submit"] {
         font-size: 18px;
         gap: 0rem;
 
+    }
+    .menu__list{
+        position: static;
+        display: flex;
+        flex-direction: row;
+    
     }
 }
 
