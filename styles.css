@@ -22,7 +22,8 @@ img {
 }
 
 header {
-    height: 85dvh;
+    height: 50dvh;
+
 }
 
 /**----------Stilos del menu */
@@ -337,21 +338,24 @@ input[type="submit"] {
 .footer__item {
     flex-basis: 40%;
     color: #fff;
+
     a {
         text-decoration: none;
         color: inherit;
     }
+
     a {
 
         display: block;
         padding: 0.3rem;
     }
-    ul{
+
+    ul {
         list-style: none;
         width: fit-content;
         margin: auto;
 
-        span{
+        span {
             font-weight: bold;
             font-size: 1.5em;
         }
@@ -360,6 +364,7 @@ input[type="submit"] {
 
 .item__red {
     margin-top: 3rem;
+
     /* text-align: left; */
     i {
         font-size: 1.7em;
@@ -424,6 +429,7 @@ input[type="submit"] {
     input[type="text"] {
         border-radius: 16px 0 0 16px;
     }
+
     .footer {
         flex-direction: row;
         text-align: left;
@@ -431,12 +437,28 @@ input[type="submit"] {
         gap: 0rem;
 
     }
-    .menu__list{
+    .menu{
+        background-color: transparent;
+    }
+    .menu__list {
         position: static;
         display: flex;
         flex-direction: row;
-    
+        background-color: transparent;
+        color: #fff;
+        justify-content: center;
+        padding: 0 5rem;
+
+        li:last-child {
+            margin-left: auto;
+        }
     }
+
+
+    .check__label {
+        display: none;
+    }
+
 }
 
 @media screen and (min-width: 1000px) {
