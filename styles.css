@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-size: 14px; */
 }
 
 img {
@@ -52,7 +51,6 @@ header {
     font-family: Anton;
     letter-spacing: 1px;
     width: 90%;
-    background-color: #3b5bac;
     color: #fff;
     align-items: center;
     margin: auto;
@@ -98,16 +96,17 @@ header {
 }
 
 .menu__list {
-    background-color: #48bc;
-    color: #000;
+    border-radius: 0 0px 16px 16px;
+    /* border-radius: 16px; */
+    background-color: #4f0e58e9;
+    color: #fff;
     margin-left: auto;
-    backdrop-filter: blur(16px) saturate(180%);
     width: 100%;
 
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 2;
+    z-index: 1;
 
     display: flex;
     flex-direction: column;
@@ -232,21 +231,48 @@ input[type="checkbox"]:checked~.label__notckeck {
         object-fit: cover;
         height: 70%;
     }
-    h3{
+
+    h3 {
         font-size: 1rem;
         opacity: 0.8;
         margin-top: 1rem;
     }
 
-    button {
-        font-family: "Titillium Web";
-        margin-top: 1rem;
-        color: inherit;
-        border: 1px solid #fff;
-        background-color: transparent;
-        padding: 1rem 3rem;
-        border-radius: 16px;
-    }
+ 
+}
+
+.item__btn{
+    cursor: pointer;
+    font-family: "Titillium Web";
+    margin-top: 1rem;
+    color: inherit;
+    border: 1px solid #fff;
+    background-color: transparent;
+    padding: 1rem 3rem;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    color: #fff;
+}
+.item__btn::before{
+    content: "";
+    width: 200%;
+    height: 200%;
+    display: block;
+    background-color: #48b;
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    left: 0;
+    transition: top .6s, left .6s;
+    border-radius: 50%;
+
+}
+
+.item__btn:hover::before{
+    top: -30%;
+    left: -30%;
 }
 
 /*------STILOS DEL MARKET TOP */
@@ -260,7 +286,7 @@ input[type="checkbox"]:checked~.label__notckeck {
 }
 
 .top_products {
-    height: 30vh;
+    height: 35vh;
     position: relative;
     overflow: hidden;
     transition: transform 0.5s;
@@ -270,16 +296,15 @@ input[type="checkbox"]:checked~.label__notckeck {
         width: 100%;
         object-fit: cover;
     }
-    p{
-        /* text-align: left; */
-    }
+
 }
 
 .img__text {
+    background-color: #4b2374;
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -290,15 +315,24 @@ input[type="checkbox"]:checked~.label__notckeck {
     gap: 10px;
     color: #fff;
     transition: transform 0.5s;
+    font-size: 0.7rem;
+    text-align: left;
 
     p {
+        width: 100%;
         opacity: 0.7;
+    }
+
+    span {
+        font-weight: bold;
+    }
+
+    h3 {
+        width: 100%;
     }
 }
 
 .top_products .img__text {
-    background-color: #3c3d89b8;
-    /* backdrop-filter: blur(2px); */
     transform: translateX(-100%);
 }
 
@@ -313,6 +347,7 @@ input[type="checkbox"]:checked~.label__notckeck {
     --width-input: 80%;
     box-shadow: 0 0 5px #fff6;
     border-radius: 16px;
+    overflow: hidden;
 
     img {
         display: none;
@@ -428,10 +463,10 @@ input[type="submit"] {
         background-color: #ccc5;
         border: 1px solid #fff9;
         backdrop-filter: blur(50px);
+        overflow: initial;
     }
 
     .sub__form {
-
         div {
             width: 70%;
         }
@@ -442,6 +477,7 @@ input[type="submit"] {
             display: block;
             bottom: 0px;
             right: 0;
+            z-index: 2;
         }
     }
 
@@ -502,6 +538,25 @@ input[type="submit"] {
         margin-bottom: 2rem;
     }
 
+    .top_products {
+        height: 45vh;
+
+    }
+
+    .img__text {
+        width: 50%;
+        font-size:1rem;       
+    }
+    .filter__item {
+        a {
+            padding: 1rem 0;
+
+        }
+    }
+    .gallery__item{
+        height: auto;
+    }
+    
 }
 
 @media screen and (min-width: 1000px) {
