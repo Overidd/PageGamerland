@@ -91,6 +91,10 @@ header {
     display: none;
 }
 
+.publicidad {
+    padding: 0;
+}
+
 .list__item {
     a {
         color: inherit;
