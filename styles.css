@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -317,12 +320,55 @@ input[type="submit"] {
 }
 
 .footer {
+    border-top: 1px solid #fffc;
+    border-bottom: 1px solid #fffc;
+    /* backdrop-filter: blur(50px) saturate(140%); */
     margin-top: auto;
-    background-color: #000;
-    color: #fff;
+    background-color: transparent;
+    background-color: #760a85;
     padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
+    font-size: 16px;
+    gap: 2rem;
 }
+
+.footer__item {
+    flex-basis: 40%;
+    color: #fff;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    a {
+
+        display: block;
+        padding: 0.3rem;
+    }
+    ul{
+        list-style: none;
+        width: fit-content;
+        margin: auto;
+
+        span{
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    }
+}
+
+.item__red {
+    margin-top: 3rem;
+    /* text-align: left; */
+    i {
+        font-size: 1.7em;
+        margin-right: 1rem;
+    }
+}
+
+
 
 /**-------------------------------------  */
 @media screen and (min-width: 700px) {
@@ -370,7 +416,6 @@ input[type="submit"] {
     input[type="text"] {
         padding: 1.5rem 1.5rem;
         font-size: 1.1rem;
-
     }
 
     input[type="submit"] {
@@ -379,6 +424,13 @@ input[type="submit"] {
 
     input[type="text"] {
         border-radius: 16px 0 0 16px;
+    }
+    .footer {
+        flex-direction: row;
+        text-align: left;
+        font-size: 18px;
+        gap: 0rem;
+
     }
 }
 
