@@ -275,9 +275,10 @@ input[type="checkbox"]:checked~.label__notckeck {
     --width-input: 80%;
     box-shadow: 0 0 5px #fff6;
     border-radius: 16px;
-    img{
-       display: none;
-       position: absolute;
+
+    img {
+        display: none;
+        position: absolute;
     }
 }
 
@@ -308,7 +309,7 @@ input[type="submit"] {
     width: calc(100% - var(--width-input));
     cursor: pointer;
     border-left: none;
-    background-image: linear-gradient(to left,#384da2, #4b2374);
+    background-image: linear-gradient(to left, #384da2, #4b2374);
 }
 
 :is(input[type="text"], input[type="submit"]):focus-visible {
@@ -337,7 +338,8 @@ input[type="submit"] {
         ;
         gap: 1rem;
     }
-    .market__sub{
+
+    .market__sub {
         /* --width-input: 80%; */
         padding: 5rem 2rem;
         background-color: #ccc5;
@@ -345,12 +347,13 @@ input[type="submit"] {
         backdrop-filter: blur(50px);
     }
 
-    .sub__form{
+    .sub__form {
 
-        div{
+        div {
             width: 70%;
         }
-        img{
+
+        img {
             position: absolute;
             width: 30%;
             display: block;
@@ -358,18 +361,23 @@ input[type="submit"] {
             right: 0;
         }
     }
-    .market{
+
+    .market {
         gap: 5rem;
     }
-    input[type="submit"], input[type="text"]{
+
+    input[type="submit"],
+    input[type="text"] {
         padding: 1.5rem 1.5rem;
         font-size: 1.1rem;
 
     }
-    input[type="submit"]{
+
+    input[type="submit"] {
         border-radius: 0 16px 16px 0;
     }
-    input[type="text"]{
+
+    input[type="text"] {
         border-radius: 16px 0 0 16px;
     }
 }
