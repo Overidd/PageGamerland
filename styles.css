@@ -24,19 +24,15 @@ img {
 
 header {
     height: 40dvh;
-    /* height: fit-content; */
     overflow: hidden;
 
     figure {
-        /* width: 90%; */
-        /* background-color: #fff4; */
         height: 100%;
     }
 }
 
 .publicidad {
     margin: auto;
-    /* object-fit: cover; */
     object-position: bottom;
     width: 75%;
     height: 100%;
@@ -44,13 +40,12 @@ header {
     border-radius: 16px;
 }
 
-
-
 /**----------Stilos del menu */
 .menu {
     font-family: Anton;
     letter-spacing: 1px;
     width: 90%;
+    max-width: 1450px;
     color: #fff;
     align-items: center;
     margin: auto;
@@ -81,11 +76,14 @@ header {
     5% {
         border-radius: 0;
         width: 100%;
+        max-width: 100%;
     }
 
     100% {
         border-radius: 0;
         width: 100%;
+        max-width: 100%;
+
     }
 }
 
@@ -158,7 +156,6 @@ input[type="checkbox"]:checked~.label__notckeck {
     display: none;
 }
 
-
 /**-----------STILOS DEL MARKET  */
 .market {
     width: 90%;
@@ -176,18 +173,19 @@ input[type="checkbox"]:checked~.label__notckeck {
 }
 
 .market__menu {
-
-    font-family: Anton;
     grid-area: marketmenu;
+    font-family: Anton;
     letter-spacing: 1.5px;
+    
+    .filter__lists {
+        display: flex;
+        list-style: none;
+        overflow: hidden;
+        gap: 15px;
+    }
 }
 
-.filter__lists {
-    display: flex;
-    list-style: none;
-    overflow: hidden;
-    gap: 15px;
-}
+
 
 .filter__item {
     flex-grow: 1;
@@ -237,8 +235,6 @@ input[type="checkbox"]:checked~.label__notckeck {
         opacity: 0.8;
         margin-top: 1rem;
     }
-
- 
 }
 
 .item__btn{
@@ -267,7 +263,6 @@ input[type="checkbox"]:checked~.label__notckeck {
     left: 0;
     transition: top .6s, left .6s;
     border-radius: 50%;
-
 }
 
 .item__btn:hover::before{
@@ -283,21 +278,21 @@ input[type="checkbox"]:checked~.label__notckeck {
     border-radius: 16px;
     border: 1px solid #fff;
     overflow: hidden;
-}
 
-.top_products {
-    height: 35vh;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.5s;
-
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+    .top_products {
+        height: 35vh;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.5s;
+    
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
     }
-
 }
+
 
 .img__text {
     background-color: #4b2374;
@@ -341,8 +336,6 @@ input[type="checkbox"]:checked~.label__notckeck {
 }
 
 /**-----STILOS DE SUB  */
-
-
 .market__sub {
     position: relative;
     grid-area: marketsub;
@@ -370,11 +363,9 @@ input[type="text"] {
     width: var(--width-input);
     margin-right: -4px;
     background-color: #fff5;
-
 }
 
 input[type="text"]:hover {
-
     background-color: rgba(255, 255, 255, 0.438);
 }
 
@@ -400,22 +391,24 @@ input[type="submit"]:hover {
 }
 
 .footer {
-    /* backdrop-filter: blur(50px) saturate(140%); */
-    backdrop-filter: blur(16px) saturate(120%);
     margin-top: auto;
-
     padding: 2rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     text-align: center;
     font-size: 16px;
-    gap: 2rem;
     box-shadow: 0 0 50px #0005;
+    section{
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
 
 .footer__item {
-    flex-basis: 40%;
+    flex-basis: 0%;
+    flex-grow: 1;
     color: #fff;
 
     a:hover {
@@ -435,9 +428,6 @@ input[type="submit"]:hover {
 
     ul {
         list-style: none;
-        width: fit-content;
-        margin: auto;
-
         span {
             font-weight: bold;
             font-size: 1.5em;
@@ -454,13 +444,11 @@ input[type="submit"]:hover {
     }
 }
 
-
 /**-------------------------------------  */
 @media screen and (min-width: 700px) {
     .market {
         max-width: 900px;
         margin: auto;
-        display: grid;
         grid-template-areas:
             "marketmenu marketmenu marketmenu"
             "markettop markettop markettop"
@@ -472,7 +460,6 @@ input[type="submit"]:hover {
 
     .market__sub {
         margin-top: 4rem;
-        /* --width-input: 80%; */
         padding: 5rem 2rem;
         background-color: #ccc5;
         border: 1px solid #fff9;
@@ -519,7 +506,9 @@ input[type="submit"]:hover {
         text-align: left;
         font-size: 18px;
         gap: 0rem;
-
+        ul{
+            text-align: right;
+        }
     }
 
     .menu {
@@ -542,7 +531,6 @@ input[type="submit"]:hover {
         }
     }
 
-
     .check__label {
         display: none;
     }
@@ -554,7 +542,6 @@ input[type="submit"]:hover {
 
     .top_products {
         height: 45vh;
-
     }
 
     .img__text {
@@ -564,13 +551,17 @@ input[type="submit"]:hover {
     .filter__item {
         a {
             padding: 1rem 0;
-
         }
     }
     .gallery__item{
         height: auto;
     }
-    
+    .footer {
+        section{
+            flex-direction: row;
+            gap: 0rem;
+        }
+    }
 }
 
 @media screen and (min-width: 1000px) {
